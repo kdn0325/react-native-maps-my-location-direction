@@ -98,8 +98,8 @@ export function MyLocationDirection(props: MyLocationDirectionProps) {
   return (
     <Marker
       coordinate={coordinate}
-      anchor={Platform.OS === 'ios' ? undefined : { x: 0.5, y: 0.5 }} // AOS 중심점 안 맞는 문제로 인하여 필요
-      tracksViewChanges={Platform.OS === 'ios' ? undefined : tracksViewChanges} // AOS Flickering 문제로 인하여 필요
+      anchor={{ x: 0.5, y: 0.5 }} // AOS 중심점 안 맞는 문제로 인하여 필요
+      tracksViewChanges={tracksViewChanges} // AOS Flickering 문제로 인하여 필요
     >
       <Image
         source={img}
